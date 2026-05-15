@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Forecast</h1>
+        
+        <div class="search-box">
+            <input type="text" id="locationInput" placeholder="Search location..." />
+            <button id="searchBtn">Search</button>
+        </div>
+        
+        <p id="location">Getting location...</p>
+        
+        <div id="error" class="error"></div>
+        
+        <div id="loading" class="loading">Loading weather data...</div>
+        
+        <div id="weather" class="hidden">
+            <div class="weather-grid">
+                <div class="card">
+                    <h2>Today</h2>
+                    <div class="weather-info">
+                        <div class="temperature" id="todayTemp">--°C</div>
+                        <div class="condition" id="todayCondition">--</div>
+                        <div class="details">
+                            <p>Humidity: <span id="todayHumidity">--%</span></p>
+                            <p>Wind: <span id="todayWind">-- km/h</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h2>Yesterday</h2>
+                    <div class="weather-info">
+                        <div class="temperature" id="yesterdayTemp">--°C</div>
+                        <div class="condition" id="yesterdayCondition">--</div>
+                        <div class="details">
+                            <p>Humidity: <span id="yesterdayHumidity">--%</span></p>
+                            <p>Wind: <span id="yesterdayWind">-- km/h</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <h3>Comparison</h3>
+                <p>Temperature change: <span id="tempChange" class="change">--</span></p>
+                <p>Humidity change: <span id="humidityChange" class="change">--</span></p>
+                <p>Wind change: <span id="windChange" class="change">--</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
